@@ -4,7 +4,7 @@ A bot that records the amount donated so far for the Charter Challenge for Fair 
 
 ## Reading data
 
-The data is available in a public dataset that is updated once per day. Example query:
+The data is available in a public dataset that is updated hourly. Example query:
 
 ```sql
 SELECT
