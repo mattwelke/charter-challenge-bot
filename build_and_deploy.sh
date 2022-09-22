@@ -3,8 +3,8 @@
 # Perform steps I added, then delegate to modified Makefile from official
 # OpenWhisk Go example.
 
-# Meant to run from developer machine right now, not from CI/CD. Login command
-# will prompt. Requires ibmcloud CLI to already be logged in.
+# Meant to run from developer machine right now, not from CI/CD.  Requires
+# ibmcloud CLI to already be logged in.
 
 GCP_CREDS_BASE64=$1
 
