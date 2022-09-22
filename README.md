@@ -19,7 +19,7 @@ LIMIT
 
 Any GCP principal authenticated can query this public dataset.
 
-![image](https://user-images.githubusercontent.com/7719209/191645414-da3f9216-40e2-41ba-9ff5-66728fd2b2c5.png)
+![image](https://user-images.githubusercontent.com/7719209/191647190-3bcb7f7c-ed19-49b9-881a-7e4ebe685864.png)
 
 ![image](https://user-images.githubusercontent.com/7719209/191645928-6068d947-c777-41ab-ae94-0d38d3c56110.png)
 
