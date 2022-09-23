@@ -30,8 +30,9 @@ SELECT
   # Truncate timestamps to just their day
   DATE(TIMESTAMP_TRUNC(date, DAY)) AS date,
   # Convert string from web page to NUMERIC and get a summary
-  # of how much had been donated by the end of that day
-  MAX(CAST(REGEXP_REPLACE(so_far, '[^.0-9 ]', '') AS NUMERIC)) AS so_far
+  # of how much had been donated by the end of that day. Format
+  # as currency at the end to display nicely.
+  CONCAT('$',FORMAT("%'.2f", MAX(CAST(REGEXP_REPLACE(so_far, '[^.0-9 ]', '') AS NUMERIC)))) AS donated_so_far
 FROM
   `public-datasets-363301.charter_challenge_bot.donation_statuses`
 GROUP BY
@@ -40,7 +41,7 @@ ORDER BY
   date DESC
 ```
 
-![image](https://user-images.githubusercontent.com/7719209/192031064-dfaee263-4286-4433-a90a-3fb069b59def.png)
+![image](https://user-images.githubusercontent.com/7719209/192045133-2591727c-bfc0-4998-a291-ce67ab2699db.png)
 
 ## Credits
 
