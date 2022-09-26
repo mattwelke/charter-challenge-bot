@@ -1,6 +1,6 @@
 # charter-challenge-for-fair-voting-bot
 
-A bot that records the amount donated so far for the Charter Challenge for Fair Voting (https://www.charterchallenge.ca/) into a public BigQuery dataset each day.
+A bot that records the amount donated so far for the Charter Challenge for Fair Voting (https://www.charterchallenge.ca/) into a public BigQuery dataset each hour.
 
 ## Querying data
 
