@@ -2,7 +2,7 @@
 
 A bot that records the amount donated so far for the Charter Challenge for Fair Voting (https://www.charterchallenge.ca/) into a public BigQuery dataset each day.
 
-## Reading data
+## Querying data
 
 The data is available in a public dataset that is updated hourly. Example query:
 
@@ -42,6 +42,37 @@ ORDER BY
 ```
 
 ![image](https://user-images.githubusercontent.com/7719209/192045133-2591727c-bfc0-4998-a291-ce67ab2699db.png)
+
+You can use BigQuery [window function calls](https://cloud.google.com/bigquery/docs/reference/standard-sql/window-function-calls) to look for significant parts of the data, like during which hours the donations were made, instead of just seeing a running total by querying the raw data:
+
+```sql
+WITH
+  t1 AS (
+  SELECT
+    TIMESTAMP_TRUNC(date, HOUR) AS hour,
+    CAST(REGEXP_REPLACE(so_far, '[^.0-9 ]', '') AS NUMERIC) AS donated_so_far
+  FROM
+    `public-datasets-363301.charter_challenge_bot.donation_statuses`
+  ORDER BY
+    hour DESC ),
+  t2 AS (
+  SELECT
+    hour,
+    donated_so_far - LAG(donated_so_far, 1) OVER (ORDER BY hour) AS donated_during_hour
+  FROM
+    t1)
+SELECT
+  hour,
+  CONCAT('$',FORMAT("%'.2f", donated_during_hour)) AS donated_during_hour
+FROM
+  t2
+WHERE
+  donated_during_hour > 0
+ORDER BY
+  hour DESC
+```
+
+![image](https://user-images.githubusercontent.com/7719209/192328899-573b1992-6790-42b7-b176-061019bfc0e6.png)
 
 ## Credits
 
