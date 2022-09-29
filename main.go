@@ -10,7 +10,7 @@ const (
 // an error because there is no client to return an error message to. This code
 // is meant to be executed on a schedule, not by a person.
 func Main(params map[string]interface{}) map[string]interface{} {
-	client, err := bqClient(params)
+	client, err := bigQueryClient(params)
 	if err != nil {
 		panic(err)
 	}
@@ -21,9 +21,7 @@ func Main(params map[string]interface{}) map[string]interface{} {
 		panic(err)
 	}
 
-	// Log info in BigQuery.
-	err = insertRow(client, donated)
-	if err != nil {
+	if err = insertRow(client, donated); err != nil {
 		panic(err)
 	}
 

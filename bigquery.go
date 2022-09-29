@@ -35,7 +35,7 @@ func (i *Item) Save() (map[string]bigquery.Value, string, error) {
 }
 
 // Creates a BigQuery client.
-func bqClient(params map[string]interface{}) (*bigquery.Client, error) {
+func bigQueryClient(params map[string]interface{}) (*bigquery.Client, error) {
 	credsJSONEncoded, ok := params[credsParamName].(string)
 	if !ok || len(credsJSONEncoded) == 0 {
 		return nil, fmt.Errorf("required param %q not provided or was empty string", credsParamName)
