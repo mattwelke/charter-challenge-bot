@@ -13,11 +13,11 @@ func Test_parseDonatedSoFar(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "Parses $22,189.00 correctly from the web page returned from my web browser on Sep 21, 2022.",
+			name: "Parses $5,526.00 correctly from the web page returned from my web browser on Jan 8, 2023.",
 			args: args{
-				webPage: webPageWith22189,
+				webPage: webPageWith5526,
 			},
-			want:    "$22,189.00",
+			want:    "$5,526.00",
 			wantErr: false,
 		},
 	}
@@ -35,7 +35,7 @@ func Test_parseDonatedSoFar(t *testing.T) {
 	}
 }
 
-const webPageWith22189 = `      <!DOCTYPE html>
+const webPageWith5526 = `      <!DOCTYPE html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>
@@ -53,42 +53,40 @@ const webPageWith22189 = `      <!DOCTYPE html>
   <title>Donate - Charter Challenge for Fair Voting</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/theme.scss" type="text/css" />
-  <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)" />
+  <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/theme.scss" type="text/css" />
+  <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)" />
 
   <!-- because ie8 ignores media queries, we need this -->
   <!--[if IE 8]>
-    <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/tablet-and-desktop.scss" type="text/css" />
+    <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/tablet-and-desktop.scss" type="text/css" />
   <![endif]-->
 
 
   <!--[if IE]>
-  <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/ie.scss" type="text/css" />
+  <link rel="stylesheet" href="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/ie.scss" type="text/css" />
   <![endif]-->
 
-  
+
 
 <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 
 <meta content="authenticity_token" name="csrf-param" />
-<meta content="O36N1yEQ5FLmuYtLdGLWTWZEfAv3w3VR1415yUxRsxU=" name="csrf-token" />
+<meta content="XQW22+kxiOQUSKfmXngiN1hV5HUTRmrDoIP/UkMuND0=" name="csrf-token" />
 
-  <link rel="canonical" href="https://www.charterchallenge.ca/donate_fall_2021" />
+  <link rel="canonical" href="https://www.charterchallenge.ca/donate_charter_challenge" />
     <meta name="Title" content="Donate">
-    <meta name="Description" content="Donate to the Charter Challenge for Fair Voting to help get rid of first-past-the-post. ">
     <meta property="og:title" content="Donate"/>
-  <meta property="og:url" content="https://www.charterchallenge.ca/donate_fall_2021">
-    <meta property="og:description" content="Donate to the Charter Challenge for Fair Voting to help get rid of first-past-the-post. ">
+  <meta property="og:url" content="https://www.charterchallenge.ca/donate_charter_challenge">
     <meta property="og:type" content="article">
-      <link rel="image_src" href="https://assets.nationbuilder.com/springtide/pages/1761/meta_images/original/Charter_Challenge_LOGO-min.png?1632934765" />
-      <meta property="og:image" content="https://assets.nationbuilder.com/springtide/pages/1761/meta_images/original/Charter_Challenge_LOGO-min.png?1632934765" />
+      <link rel="image_src" href="https://assets.nationbuilder.com/springtide/sites/38/meta_images/original/CC_LOGO_Long_Logo_-_COLOUR.png?1556419891" />
+      <meta property="og:image" content="https://assets.nationbuilder.com/springtide/sites/38/meta_images/original/CC_LOGO_Long_Logo_-_COLOUR.png?1556419891" />
   <meta property="og:site_name" content="Charter Challenge for Fair Voting"/>
 
 <script type="text/javascript">
   var NB = NB || {};
 
   NB.environment = "production";
-  NB.pageId = "1761";
+  NB.pageId = "1773";
   NB.Liquid = NB.Liquid || {
     Theme: {
       version: 2,
@@ -106,7 +104,7 @@ const webPageWith22189 = `      <!DOCTYPE html>
 <script type="text/javascript">
     //<![CDATA[
       window._auth_token_name = "authenticity_token";
-      window._auth_token = "O36N1yEQ5FLmuYtLdGLWTWZEfAv3w3VR1415yUxRsxU=";
+      window._auth_token = "XQW22+kxiOQUSKfmXngiN1hV5HUTRmrDoIP/UkMuND0=";
     //]]>
 </script>
 
@@ -115,7 +113,7 @@ const webPageWith22189 = `      <!DOCTYPE html>
       <link rel="icon" type="image/x-icon" href="https://assets.nationbuilder.com/springtide/sites/38/favicon_images/original/faviconcc.png?1496167237" />
 
 
-  <script src="https://assets.nationbuilder.com/assets/liquid/main-8c2eba07eac00048396ca2d93ee8c5910a71fab32d0d2ca58e306ee84c6227bf.js"></script>
+  <script src="https://assets.nationbuilder.com/assets/liquid/main-ddd08e9e6a89697bf95bed251cd7280f3a9ea8447407c06ffc458884c536d760.js"></script>
 
 <script type="text/javascript">
   window.twttr = (function (d,s,id) {
@@ -224,9 +222,9 @@ const webPageWith22189 = `      <!DOCTYPE html>
   <script>
     NB.payments.publishableKey = "pk_live_1TjMHnI0fp51k3hKVhJEpm6D";
     NB.payments.epoButtonTheme = "dark";
-    
-    
-    
+
+
+
     NB.payments.descriptor = "SPRINGTIDE"
   </script>
     <script src="https://assets.nationbuilder.com/assets/payments_styling-ad9653f0ddd18fbd898a382fc934c3af9646949f19b2ba928321865cd6d5ebfb.js"></script>
@@ -263,17 +261,17 @@ while we re-configure the social share prompt -->
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=119846658737416&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
 
-<script type="text/javascript" src="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/jquery.ui.effect.min.js"></script>
-<script type="text/javascript" src="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/jquery.ui.effect-slide.min.js"></script>
-<script type="text/javascript" src="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431663162483/default/staged-donations.js"></script>  
-  
+<script type="text/javascript" src="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/jquery.ui.effect.min.js"></script>
+<script type="text/javascript" src="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/jquery.ui.effect-slide.min.js"></script>
+<script type="text/javascript" src="https://springtide.nationbuilder.com/themes/38/592ad4daed0e46ae54000000/0/attachments/14959792431671722882/default/staged-donations.js"></script>
+
 </head>
 <body class="aware-theme v2-theme page-type-donation-v2 js with-background">
  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6TB763" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  
-  
+
+
   <div id="pattern" class="pattern">
     <div class="wrap" id="wrap">
       <div id="body" class="page-pages-show-donation-v2-wide">
@@ -282,7 +280,7 @@ while we re-configure the social share prompt -->
           <div class="width-container clearfix">
 
             <div class="tablet-visible">
-              
+
 <!-- _nav.html -->
 
 
@@ -290,11 +288,11 @@ while we re-configure the social share prompt -->
 
             </div>
 
-            
+
               <div class="site-logo">
                 <header><a href="/"><img src="https://assets.nationbuilder.com/springtide/sites/38/meta_images/original/CC_LOGO_Long_Logo_-_COLOUR.png?1556419891"></a></header>
               </div>
-            
+
 
 
           </div>
@@ -304,7 +302,7 @@ while we re-configure the social share prompt -->
 
         <div class="nav-container desktop-visible">
           <div class="width-container clearfix">
-              
+
 <!-- _nav.html -->
 
 
@@ -314,18 +312,18 @@ while we re-configure the social share prompt -->
         </div>
 
 
-        
+
 
         <div class="main-container" id="middle">
           <div class="main width-container clearfix">
 
-            
-            
+
+
 <!-- _columns_1.html -->
 <div class="onecolumn-container clearfix">
 
   <div class="columns-1-flash"><div id="flash_container">
-  
+
 
 
 </div>
@@ -333,63 +331,63 @@ while we re-configure the social share prompt -->
 
   <div class="content-pages-show-donation-v2-wide">
     <div id="content">
-  <form id="donate_fall_2021_page_new_donation_form" class="donation_form" method="POST" action="/forms/donations"><input name="authenticity_token" type="hidden" value="O36N1yEQ5FLmuYtLdGLWTWZEfAv3w3VR1415yUxRsxU="/><input name="page_id" type="hidden" value="1761"/><input name="return_to" type="hidden" value="https://www.charterchallenge.ca/donate_fall_2021"/><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br/><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"/></p></div>
+  <form id="donate_charter_challenge_page_new_donation_form" class="donation_form" method="POST" action="/forms/donations"><input name="authenticity_token" type="hidden" value="XQW22+kxiOQUSKfmXngiN1hV5HUTRmrDoIP/UkMuND0="/><input name="page_id" type="hidden" value="1773"/><input name="return_to" type="hidden" value="https://www.charterchallenge.ca/donate_charter_challenge"/><div class="email_address_form" style="display:none;" aria-hidden="true"><p><label for="email_address">Optional email code</label><br/><input name="email_address" type="text" class="text" id="email_address" autocomplete="off"/></p></div>
   <div class="form-wrap">
-    
+
       <div id="headline">
         <h2>Donate</h2>
       </div>
-    
-    
+
+
     <div id="intro" class="intro">
-      <p>We need your support to fund the legal fees and supporting campaign for the Charter Challenge for Fair Voting - a court case against Canada's unfair voting system. </p>
-<p>Over the past three years, we've raised over $150,000 that has brought us to the point where we have submitted our Notice of Application and our affidavit and evidence package. We are now seeking $30,000 to support the drafting of the factum. </p>
+      <p>We need your support to fund the legal fees and supporting campaign for the Charter Challenge for Fair Voting - a court case against Canada's unfair voting system. </p>
+<p>Over the past four years, we've raised over $180,000 that has brought us to the point where we have submitted our Notice of Application, our affidavit and evidence package, and starting preparing reply evidence. We are now seeking $25,000 to <span style="font-weight: 400;">cover the costs of presenting our case in court. </span></p>
 <p><span>By supporting this case, you'll be joining the 1000+ Canadians who have already contributed enough support </span><span>to cover the costs of preparing a court filing and securing expert testimony for our case.</span></p>
 <p><span style="font-weight: 400;">You can make a secure online donation via credit card, below. For alternative ways to donate to the Charter Challenge, visit <a href="https://www.charterchallenge.ca/ways-to-give">this page</a>.</span></p>
     </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
       <div class="clearfix">
-        
+
         <div class="progress" style="width: 100%;">
-          <div class="bar bar-success" style="width: 73.96333333333334%;">
-            
-                <div class="bar-text">$22,189.00 raised*</div>
-            
+          <div class="bar bar-success" style="width: 22.104%;">
+
+                <div class="bar-text">$5,526.00 raised*</div>
+
           </div>
         </div>
-    
-    
-        <div class="bar-goal">GOAL: $30,000.00</div>    
-    
+
+
+        <div class="bar-goal">GOAL: $25,000.00</div>
+
       </div>
-  
-    
+
+
 
     <div class="form">
 
       <div class="form-errors">
-        
+
       </div>
 
-      
+
 
       <div class="row-fluid">
         <div class="span12">
-          
+
           <div class="row-fluid padbottomless">
             <h4>1. Amount</h4>
           </div>
           <div class="row-fluid">
             <div class="span12">
-              
+
                 <div class="radio-inline donation-v2-amounts padbottommore">
   <span>
-    
+
       <input id="donation_amount_25"
              type="radio"
              name="donation[amount_option]"
@@ -400,7 +398,7 @@ while we re-configure the social share prompt -->
   </span>
 
   <span>
-    
+
       <input id="donation_amount_50"
              type="radio"
              name="donation[amount_option]"
@@ -411,18 +409,7 @@ while we re-configure the social share prompt -->
   </span>
 
   <span>
-    
-      <input id="donation_amount_75"
-             type="radio"
-             name="donation[amount_option]"
-             class="donation_amount_option"
-             value="75"
-              />
-    <label for="donation_amount_75" class="radio">$75</label>
-  </span>
 
-  <span>
-    
       <input id="donation_amount_100"
              type="radio"
              name="donation[amount_option]"
@@ -433,62 +420,18 @@ while we re-configure the social share prompt -->
   </span>
 
   <span>
-    
-      <input id="donation_amount_200"
+
+      <input id="donation_amount_250"
              type="radio"
              name="donation[amount_option]"
              class="donation_amount_option"
-             value="200"
+             value="250"
               />
-    <label for="donation_amount_200" class="radio">$200</label>
+    <label for="donation_amount_250" class="radio">$250</label>
   </span>
 
   <span>
-    
-      <input id="donation_amount_300"
-             type="radio"
-             name="donation[amount_option]"
-             class="donation_amount_option"
-             value="300"
-              />
-    <label for="donation_amount_300" class="radio">$300</label>
-  </span>
 
-  <span>
-    
-      <input id="donation_amount_400"
-             type="radio"
-             name="donation[amount_option]"
-             class="donation_amount_option"
-             value="400"
-              />
-    <label for="donation_amount_400" class="radio">$400</label>
-  </span>
-
-  <span>
-    
-      <input id="donation_amount_500"
-             type="radio"
-             name="donation[amount_option]"
-             class="donation_amount_option"
-             value="500"
-              />
-    <label for="donation_amount_500" class="radio">$500</label>
-  </span>
-
-  <span>
-    
-      <input id="donation_amount_750"
-             type="radio"
-             name="donation[amount_option]"
-             class="donation_amount_option"
-             value="750"
-              />
-    <label for="donation_amount_750" class="radio">$750</label>
-  </span>
-
-  <span>
-    
       <input id="donation_amount_1000"
              type="radio"
              name="donation[amount_option]"
@@ -499,14 +442,14 @@ while we re-configure the social share prompt -->
   </span>
 
   <span>
-    
-      <input id="donation_amount_2000"
+
+      <input id="donation_amount_2500"
              type="radio"
              name="donation[amount_option]"
              class="donation_amount_option"
-             value="2000"
+             value="2500"
               />
-    <label for="donation_amount_2000" class="radio">$2,000</label>
+    <label for="donation_amount_2500" class="radio">$2,500</label>
   </span>
 
 <span>
@@ -518,11 +461,11 @@ while we re-configure the social share prompt -->
   <label for="donation_amount_other" class="radio">Other</label>
 </span>
 </div>
-              
 
-              
+
+
               <div class="row-fluid donation-v2-options ">
-                
+
                 <div class="span6">
                   <div class="donation-other-input-container">
   <div class="currency-symbol">$</div>
@@ -534,8 +477,8 @@ while we re-configure the social share prompt -->
 </div>
 
                 </div>
-                
-                
+
+
                 <div class="span6">
                   <div class="donation-v2-occurence-radio">
                     <span>
@@ -563,19 +506,19 @@ while we re-configure the social share prompt -->
 
                   </div>
                 </div>
-                
-              </div>
-              
 
-              
-                        
+              </div>
+
+
+
+
 When you choose an amount, please remember that all donations above $25 are eligible for a charitable donation tax credit.
 <br><br>
-The total value of these credits varies by province or territory, ranging from a 19% to 35% refund for the first $200 donated, and a 40% - 53% refund on any amounts donated above $200. 
-                      
+The total value of these credits varies by province or territory, ranging from a 19% to 35% refund for the first $200 donated, and a 40% - 53% refund on any amounts donated above $200.
+
             </div>
           </div>
-          
+
           <div class="row-fluid padbottomless">
             <h4 class="sub-header">2. Your information</h4>
           </div>
@@ -625,27 +568,27 @@ The total value of these credits varies by province or territory, ranging from a
             </div>
 
           </div>
-          
+
           <div class="row-fluid">
 
             <div class="span12">
-              <label class="checkbox" for="donation_email_opt_in"><input name="donation[email_opt_in]" type="hidden" value="0" /><input checked="checked" id="donation_email_opt_in" name="donation[email_opt_in]" type="checkbox" value="1" /> 
+              <label class="checkbox" for="donation_email_opt_in"><input name="donation[email_opt_in]" type="hidden" value="0" /><input checked="checked" id="donation_email_opt_in" name="donation[email_opt_in]" type="checkbox" value="1" />
 Send me email updates from Springtide, and allow both Springtide and Fair Voting BC to contact me for the purposes of communication about the Charter Challenge for Fair Voting Project.
-<br> 
+<br>
                 <br>
-                (If you have already opted into emails from Springtide and/or the Charter Challenge project, unchecking this box will mean you will no longer receive any updates from us). 
+                (If you have already opted into emails from Springtide and/or the Charter Challenge project, unchecking this box will mean you will no longer receive any updates from us).
               </label>
             </div>
 
           </div>
-          
-          
 
-          
 
-          
 
-        
+
+
+
+
+
           <div class="row-fluid padbottomless">
             <h4 class="sub-header">3. Payment information</h4>
           </div>
@@ -659,10 +602,10 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
           </div>
           <div class="row-fluid padtopless padbottomless padtop">
             <div clas="span12">
-              
-              
+
+
               <label for="donation_is_private" class="checkbox padtopmore"><input name="donation[is_private]" type="hidden" value="0" /><input class="checkbox" id="donation_is_private" name="donation[is_private]" type="checkbox" value="1" /> Don't publish my donation on the website.</label>
-              
+
               <span style="font-size: xx-small;">
 
               Note: all donations processed on this page are secure payments processed via <a href="https://stripe.com/en-ca">Stripe</a>, which has the highest level of security certification attainable in the payments industry (PCI Level 1). For alternative ways to donate, visit <a href="https://www.charterchallenge.ca/ways-to-give"> this page</a>.
@@ -671,25 +614,25 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
           </div>
           <div class="row-fluid">
             <div class="span12">
-            
+
             </div>
             <div class="span12">
               <div class="submit-container">
                 <div class="donation-v2-amount">
-                  
+
                   <span>
-                    
+
                     <span class="hidden">$</span><span class="nb_donation_v2_amount">Please select an amount</span>
-                    
-                    
+
+
                     <div class="nb_donation_v2_interval" data-placeholder="paid monthly"></div>
-                    
+
                   </span>
-                  
+
                 </div>
-                
+
                 <input class="submit-button btn btn-primary btn-lg" type="submit" name="commit" value="Donate now" />
-                
+
               </div>
             </div>
             <div class="form-submit"></div>
@@ -709,8 +652,8 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
   <p> * Total reflects processed donations only. Donations made from this page are processed immediately, however some donations (e.g. cheque, e-transfer, paypal) are processed manually and there can be a delay (of up to 1 - 2 weeks) before they will be added to this total.</p>
   <p> All donations to the Charter Challenge for Fair Voting are made to the Springtide Collective for Democracy Society -  P.O. BOX 40003| Robie Street PO | Halifax, NS Canada | B3K 0E4 | 902.989.3668
     <p>Springtide is a registered Canadian charity. Our CRA charitable registration number is 838267136RR0001. For more on charitable giving in Canada, see <a href=https://www.canada.ca/charities-giving>canada.ca/charities-giving</a>
-<p> <br>Contact us: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92fbfcf4fdd2e1e2e0fbfcf5e6fbf6f7bcfcf5fd">[email&#160;protected]</a>
-  <p>In the event that the fundraising goal is not met, Springtide (the recipient charity of all donations) retains the right to hold the funds collected for use in a future case, or alternatively, to create educational programming and resources for teaching and learning about electoral reform in Canada, or other charitable purposes as Springtide sees fit. 
+<p> <br>Contact us: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b52555d547b484b4952555c4f525f5e15555c54">[email&#160;protected]</a>
+  <p>In the event that the fundraising goal is not met, Springtide (the recipient charity of all donations) retains the right to hold the funds collected for use in a future case, or alternatively, to create educational programming and resources for teaching and learning about electoral reform in Canada, or other charitable purposes as Springtide sees fit.
 </span>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/assets/liquid/theme_donation_v2.js"></script>
@@ -721,7 +664,7 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
 <!-- /onecolumn-container -->
 <!-- /_columns_1.html -->
 
-            
+
 
           </div>
           <!-- .main -->
@@ -768,10 +711,10 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
             <div class="row-fluid">
 
               <div class="span6">
-                
+
               </div>
 
-          
+
 
             </div>
 
@@ -786,18 +729,18 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
   </div>
   <!-- #pattern -->
 
-  
+
 
 
   <!--[if lt IE 9]>
   <script type="text/javascript" src="/javascripts/jquery.backstretch.min.js"></script>
   <script type="text/javascript">
-    jQuery.backstretch("https://assets.nationbuilder.com/springtide/pages/1761/header_images/original/gavel1.jpg?1632934760", {speed: 0});
+    jQuery.backstretch("https://assets.nationbuilder.com/springtide/pages/1773/header_images/original/gavel.png?1671722376", {speed: 0});
   </script>
   <![endif]-->
   <style>
     body {
-      background: url('https://assets.nationbuilder.com/springtide/pages/1761/header_images/original/gavel1.jpg?1632934760') no-repeat center center fixed;
+      background: url('https://assets.nationbuilder.com/springtide/pages/1773/header_images/original/gavel.png?1671722376') no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -826,7 +769,7 @@ Send me email updates from Springtide, and allow both Springtide and Fair Voting
 
   <script>
     if ( window.self !== window.top ) {
-      var referrer_origin = "https://www.google.com";
+      var referrer_origin = "https://www.charterchallenge.ca";
       if ( window.location.origin !== referrer_origin ) {
         var xhttp = new XMLHttpRequest();
         var params = "iframe_req_path=" + window.location.pathname + "&referrer_origin=" + referrer_origin;
