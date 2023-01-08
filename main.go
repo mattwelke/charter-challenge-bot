@@ -2,7 +2,7 @@ package main
 
 const (
 	regex          = `\$(\d{1,3},)?\d{1,3}(\.\d{2})? raised`
-	URL            = "https://www.charterchallenge.ca/donate_fall_2021"
+	URL            = "https://www.charterchallenge.ca/donate_charter_challenge"
 	credsParamName = "gcpCredsBase64"
 )
 
