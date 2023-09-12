@@ -1,9 +1,10 @@
 package main
 
 const (
-	regex          = `\$(\d{1,3},)?\d{1,3}(\.\d{2})? raised`
-	URL            = "https://www.charterchallenge.ca/donate_charter_challenge"
-	credsParamName = "gcpCredsBase64"
+	regexMonetaryValue = `\$(\d{1,3},)?\d{1,3}(\.\d{2})? raised`
+	regexJustStarted   = `JUST STARTED`
+	URL                = "https://www.charterchallenge.ca/donate_charter_challenge"
+	credsParamName     = "gcpCredsBase64"
 )
 
 // Main function for the action. For error handling, panics without returning
