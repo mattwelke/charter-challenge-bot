@@ -3,7 +3,7 @@ package main
 const (
 	regexMonetaryValue = `\$(\d{1,3},)?\d{1,3}(\.\d{2})? raised`
 	regexJustStarted   = `JUST STARTED`
-	URL                = "https://www.charterchallenge.ca/donate_charter_challenge"
+	URL                = "https://www.charterchallenge.ca/donate_appeal"
 	credsParamName     = "gcpCredsBase64"
 )
 
