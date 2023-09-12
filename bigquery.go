@@ -57,7 +57,7 @@ func insertRow(client *bigquery.Client, donated string) error {
 	items := []*Item{
 		{
 			SoFar: donated,
-			Goal:  "$25,000.00",
+			Goal:  "$23,000.00",
 		},
 	}
 	if err := inserter.Put(context.Background(), items); err != nil {

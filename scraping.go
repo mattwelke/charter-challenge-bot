@@ -30,11 +30,24 @@ func fetchData() (string, error) {
 
 // Parses the amount donated so far from a web page.
 func parseDonatedSoFar(webPage string) (string, error) {
-	re, err := regexp.Compile(regex)
+	// First, look for the "JUST STARTED" text. If present, interpret this as
+	// $0 donated so far.
+	re, err := regexp.Compile(regexJustStarted)
 	if err != nil {
-		return "", fmt.Errorf("error compiling regex expression: %w; regex string used: %s", err, regex)
+		return "", fmt.Errorf("error compiling regex expression for $0 amount parse: %w; regex string used: %s", err, regexJustStarted)
 	}
 	matched := re.FindString(webPage)
+	if matched == "JUST STARTED" {
+		return "$0", nil
+	}
+
+	// If it's not $0 so far, use the monetary value regex to parse out the
+	// amount donated and use that instead of $0.
+	re, err = regexp.Compile(regexMonetaryValue)
+	if err != nil {
+		return "", fmt.Errorf("error compiling regex expression for monetary value parse: %w; regex string used: %s", err, regexMonetaryValue)
+	}
+	matched = re.FindString(webPage)
 	if len(matched) == 0 {
 		return "", fmt.Errorf("after parsing with regex, matched string was of zero length")
 	}
