@@ -73,7 +73,3 @@ ORDER BY
 ```
 
 ![image](https://user-images.githubusercontent.com/7719209/192328899-573b1992-6790-42b7-b176-061019bfc0e6.png)
-
-## Credits
-
-Example used for guidance: https://github.com/apache/openwhisk-runtime-go/tree/master/examples/module-main
