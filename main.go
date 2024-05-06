@@ -7,11 +7,11 @@ const (
 	credsParamName     = "gcpCredsBase64"
 )
 
-// Main function for the action. For error handling, panics without returning
-// an error because there is no client to return an error message to. This code
-// is meant to be executed on a schedule, not by a person.
-func Main(params map[string]interface{}) map[string]interface{} {
-	client, err := bigQueryClient(params)
+// Main function for the job. For error handling, panics without returning an error because there
+// is no client to return an error message to. This code is meant to be executed on a schedule
+// automatically by an automated system, not manually by a user.
+func main() {
+	client, err := bigQueryClient()
 	if err != nil {
 		panic(err)
 	}
@@ -25,8 +25,4 @@ func Main(params map[string]interface{}) map[string]interface{} {
 	if err = insertRow(client, donated); err != nil {
 		panic(err)
 	}
-
-	// Return an empty dict to make OpenWhisk happy.
-	msg := make(map[string]interface{})
-	return msg
 }

@@ -5,16 +5,14 @@ package main
 
 import (
 	"context"
-	b64 "encoding/base64"
 	"fmt"
 	"time"
 
 	"cloud.google.com/go/bigquery"
-	"google.golang.org/api/option"
 )
 
 const (
-	projectID = "public-datasets-363301"
+	projectID = "*detect-project-id*"
 	dataset   = "charter_challenge_bot"
 	table     = "donation_statuses"
 )
@@ -35,16 +33,8 @@ func (i *Item) Save() (map[string]bigquery.Value, string, error) {
 }
 
 // Creates a BigQuery client.
-func bigQueryClient(params map[string]interface{}) (*bigquery.Client, error) {
-	credsJSONEncoded, ok := params[credsParamName].(string)
-	if !ok || len(credsJSONEncoded) == 0 {
-		return nil, fmt.Errorf("required param %q not provided or was empty string", credsParamName)
-	}
-	credsJSON, err := b64.StdEncoding.DecodeString(credsJSONEncoded)
-	if err != nil {
-		return nil, fmt.Errorf("could not base64-decode creds JSON: %w", err)
-	}
-	client, err := bigquery.NewClient(context.Background(), projectID, option.WithCredentialsJSON([]byte(credsJSON)))
+func bigQueryClient() (*bigquery.Client, error) {
+	client, err := bigquery.NewClient(context.Background(), projectID)
 	if err != nil {
 		return nil, fmt.Errorf("could not create BigQuery client: %w", err)
 	}
