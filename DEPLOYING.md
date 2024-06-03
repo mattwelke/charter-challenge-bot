@@ -15,6 +15,10 @@ Some steps I can run to manually create new builds and deploy them after updates
 1. Deploy job
 
    ```
+   gcloud config set project public-datasets-363301
+   ```
+
+   ```
    gcloud run jobs deploy charter-challenge-scraper \
      --image northamerica-northeast2-docker.pkg.dev/public-datasets-363301/charter-challenge-scraper/scraper \
      --region northamerica-northeast2 \

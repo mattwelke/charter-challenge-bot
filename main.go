@@ -3,8 +3,8 @@ package main
 const (
 	regexMonetaryValue = `\$(\d{1,3},)?\d{1,3}(\.\d{2})? raised`
 	regexJustStarted   = `JUST STARTED`
-	URL                = "https://www.charterchallenge.ca/donate_appeal"
-	credsParamName     = "gcpCredsBase64"
+	mainPageURL        = "https://www.charterchallenge.ca/"
+	gcpProjectID       = "public-datasets-363301"
 )
 
 // Main function for the job. For error handling, panics without returning an error because there
@@ -17,12 +17,12 @@ func main() {
 	}
 	defer client.Close()
 
-	donated, err := donatedSoFar()
+	donated, goal, url, err := donatedSoFar()
 	if err != nil {
 		panic(err)
 	}
 
-	if err = insertRow(client, donated); err != nil {
+	if err = insertRow(client, donated, url, goal); err != nil {
 		panic(err)
 	}
 }
