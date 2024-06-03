@@ -22,7 +22,7 @@ func main() {
 		panic(err)
 	}
 
-	if err = insertRow(client, donated, url, goal); err != nil {
+	if err = insertRow(client, donated, goal, url); err != nil {
 		panic(err)
 	}
 }
